@@ -29,7 +29,7 @@ aws cloudformation create-stack --stack-name aws-saas-factory-bootcamp \
 
 STATUS=$(aws cloudformation describe-stacks --region $2 --stack-name aws-saas-factory-bootcamp --query 'Stacks[0].StackStatus')
 count=0
-while [ $STATUS == '"CREATE_IN_PROGRESS"' ]
+while [ $STATUS == "CREATE_IN_PROGRESS" ]
 do
     ((count=count+1))
 
